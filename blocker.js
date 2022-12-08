@@ -38,17 +38,19 @@ function readData() {
 function showBlocker(site){
     let outerDiv = document.createElement('div');
     outerDiv.id = "modal-from-blocker-extension"
-    outerDiv.style ="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;"
+    outerDiv.style ="z-index: 2147483647; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;"
     let content = document.createElement('div');
-    content.style = "position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);background-color: white;padding: 1rem 1.5rem;width: 40%;border-radius: 0.5rem;"
+    content.style = "position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);background-color: rgb(35, 34, 43); padding: 1rem 1.5rem;width: 40%;border-radius: 0.5rem; color: #f8f8f2; font-size: 13px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"
     let closeButton = document.createElement('button')
-    closeButton.innerHTML = "&times;"
-    closeButton.style = "border: none; position: fixed; top: 0; right: 0; margin-top: 2.5%; margin-right: 2.5%; width: 1.5rem;line-height: 1.5rem;text-align: center;cursor: pointer;border-radius: 0.25rem;background-color: lightgray;"
-    content.innerHTML += "<h1>Are you sure you want to access this page?</h1><br/><h3>" + site.site + "</h3><p>Social Media Blocker has blocked this page " + site.notifications + " times"
+    closeButton.innerHTML = "Close"
+    closeButton.style = "border: none; padding: 2%; text-align: center;cursor: pointer;border-radius: 0.25rem;background-color: #f44263; margin-left: 5%; color: white;"
+    content.innerHTML += "<h1 style='color: #f8f8f2; font-size: 20px;'>Are you sure you want to access this page?</h1><br/><h3 style='color: #f8f8f2; font-size: 13px;'>" + site.site + "</h3>"+
+    "<p style='margin-top: 13px; margin-bottom: 13px;'>You have accessed this page " + site.notifications + " times</p>"
     let closeTab = document.createElement('button')
-    closeTab.innerHTML = "THE RIGHT DECISION!"
-    content.appendChild(closeButton)
+    closeTab.innerHTML = "I don't want to access this site!"
+    closeTab.style = "border: none; padding: 2%; background-color: #4285f4; text-align: center; cursor: pointer;border-radius: 0.25rem; color: white;"
     content.appendChild(closeTab)
+    content.appendChild(closeButton)
     outerDiv.appendChild(content)
     document.body.appendChild(outerDiv);
     
