@@ -4,7 +4,6 @@ The sites that are currently effected by this extension are:
 - youtube.com
 - instagram.com
 
-If you wan't to test the extension follow this little testsetup:
-1. Go to about:debugging#/runtime/this-firefox in your firefox browser
-2. Click the button "load temporary Add-on..."
-3. Select the zip file IN the project or the blocker.js file
+## The extension is now public!
+You can check it out here: https://addons.mozilla.org/en-US/firefox/addon/social-media-blocker/
+The extension is experimental and I'm still working on it ;)
