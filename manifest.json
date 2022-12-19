@@ -11,7 +11,7 @@
       },
     "content_scripts": [
       {
-        "matches": ["https://www.instagram.com/", "https://www.youtube.com/"],
+        "matches": ["https://www.instagram.com/", "https://www.youtube.com/"  ],
         "js": ["blocker.js"]
       }
     ],
