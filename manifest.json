@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Social Media Blocker",
-    "version": "1.1",
+    "version": "1.2",
   
     "description": "This extension blocks (some) social media sites and asks you if you really want to access them.",
     "applications": {
